@@ -27,6 +27,21 @@ public class RobotController {
 		
 		return ResponseEntity.ok(msgReturn); 
 	}
+
+	@GetMapping(value = "/TocToc")
+	public ResponseEntity<String> tocToc() {
+		String msgReturn;
+		
+		try {
+			msgReturn = robotService.tocToc();
+			
+		} catch (Exception e) {			
+			msgReturn = e.getMessage();
+			
+		}
+		
+		return ResponseEntity.ok(msgReturn); 
+	}	
 	
 	@GetMapping(value = "/StopWakeUp")
 	public ResponseEntity<String> stopWakeUp()

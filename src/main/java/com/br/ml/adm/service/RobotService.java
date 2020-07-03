@@ -4,5 +4,8 @@ public interface RobotService {
 
 	void wakeUp(Long intervaloMinutos) throws InterruptedException;
 
-	void desativarWakeUp();	
+	void desativarWakeUp();
+
+	String tocToc();
+	
 }

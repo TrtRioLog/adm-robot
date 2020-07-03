@@ -41,7 +41,7 @@ public class RobotServiceImpl implements RobotService {
 		}
 		
 	}	
-
+	
 	private void ativarWakeUp() {
 		wakeUpAtivado = true;		
 	}
@@ -51,4 +51,8 @@ public class RobotServiceImpl implements RobotService {
 		wakeUpAtivado = false;		
 	}
 
+	@Override
+	public String tocToc() {
+		return "I am here!";		
+	}	
 }
