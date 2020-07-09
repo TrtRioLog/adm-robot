@@ -17,7 +17,7 @@ public class RobotServiceImpl implements RobotService {
 
 		RestTemplate restTemplate = new RestTemplate();
 		
-		String url = "https://adm-ml-controle-tests.herokuapp.com/variavel/chromedrive";
+		String url = "https://adm-ml-controle.herokuapp.com/variavel/chromedrive";
 		
 		String resposta;
 		
