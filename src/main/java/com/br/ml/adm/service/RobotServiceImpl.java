@@ -13,11 +13,17 @@ public class RobotServiceImpl implements RobotService {
 
 	@Override
 	@Async
-	public void  wakeUp(Long intervaloMinutos) throws InterruptedException {
+	public void  wakeUp(Long intervaloMinutos, String App) throws InterruptedException {
 
 		RestTemplate restTemplate = new RestTemplate();
+
+		String url;
 		
-		String url = "https://adm-ml-controle-tests.herokuapp.com/variavel/chromedrive";
+		if(App == "dev"){
+			url = "https://adm-ml-controle-tests.herokuapp.com/variavel/chromedrive";
+		} else {
+			url = "https://adm-ml-controle.herokuapp.com/variavel/chromedrive";
+		}
 		
 		String resposta;
 		

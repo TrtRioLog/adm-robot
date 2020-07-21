@@ -14,11 +14,11 @@ public class RobotController {
 	RobotService robotService;
 	
 	@GetMapping(value = "/WakeUp")
-	public ResponseEntity<String> wakeUp(@RequestParam Long intervaloMinutos) {
+	public ResponseEntity<String> wakeUp(@RequestParam Long intervaloMinutos, @RequestParam String App) {
 		String msgReturn = "WakeUp!";
 		
 		try {
-			robotService.wakeUp(intervaloMinutos);
+			robotService.wakeUp(intervaloMinutos, App);
 			
 		} catch (Exception e) {			
 			msgReturn = e.getMessage();
